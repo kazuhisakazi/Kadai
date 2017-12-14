@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+<script>
+$(function(){
+    $(window).on('touchmove.noScroll', function(e) {
+    e.preventDefault();
+    });
+
+    $("game.html").ready(function() {
+    var current = $('.counter').text();
+    $({count: 3}).animate({count: current}, {
+        duration: 2000,
+        easing: 'linear',
+        progress: function() { 
+            $('.counter').text(Math.ceil(this.count)); 
+        }
+    });
+    });
+
+    setTimeout(function(){
+    
+    var clickEventType=((window.ontouchstart!==null)?'click':'touchstart');
+
+    $(".bar1").on(clickEventType, function(){
+        $(".bar5").animate({top: "+=15",
+                            height: "-=15",}, 100 );
+     });
+     
+    $(".bar2").on(clickEventType, function(){
+        $(".bar6").animate({top: "+=15",
+                            height: "-=15",}, 100 );   
+    });
+    
+    $(".bar3").on(clickEventType, function(){
+        $(".bar7").animate({top: "+=15",
+                        　  height: "-=15",}, 100 );  
+    });
+    
+    $(".bar4").on(clickEventType, function(){
+        $(".bar8").animate({top: "+=15",
+                            height: "-=15",}, 100 );   
+    });
+    
+    $(".bar5").on(clickEventType, function(){
+        $(this).animate({height: "+=15",
+                         top: "-=15",}, 100 );
+    });
+    
+    $(".bar6").on(clickEventType, function(){
+        $(this).animate({height: "+=15",
+                         top: "-=15",}, 100 );    
+    });
+    
+    $(".bar7").on(clickEventType, function(){
+        $(this).animate({height: "+=15",
+                         top: "-=15",}, 100 );      
+    });
+    
+    $(".bar8").on(clickEventType, function(){
+        $(this).animate({height: "+=15",
+                         top: "-=15",}, 100 );     
+    });
+    },3500);
+    
+    setTimeout(function(){
+        $('.counter').hide();
+    },3500);
+    
+    
+    setTimeout(function(){
+    window.location.href = 'result.html';
+    },15000);
+    
+});
+
+</script>
+</head>
+<body>
+    <p><span class="counter">1</span></p>
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+    <div class="bar4"></div>
+    <div class="bar5"></div>
+    <div class="bar6"></div>
+    <div class="bar7"></div>
+    <div class="bar8"></div>
+</body>
+</html>

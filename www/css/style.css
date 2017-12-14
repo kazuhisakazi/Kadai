@@ -1,0 +1,89 @@
+html,body{
+  overflow: hidden
+}
+
+
+.counter{
+    position: absolute;
+    font-size: 75px;
+    font-family: fantasy;
+    color: lightcyan;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 1px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 5;
+}
+
+.bar1 {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    background-color: #FFFFCC;
+}
+
+.bar2 {
+    position: absolute;
+    top: 0;
+    left:25%;
+    width: 25%;
+    height: 100%;
+    background-color: #FFFF99;
+}
+
+.bar3 {
+    position: absolute;
+    top:0px;
+    left:50%;
+    width: 25%;
+    height: 100%;
+    background-color: #FFFF66;
+}
+
+.bar4 {
+    position: absolute;
+    top: 0;
+    left:75%;
+    width: 25%;
+    height: 100%;
+    background-color: #FFFF33;
+}
+
+.bar5 {
+    position: absolute;
+    top:50%;
+    left:0;
+    width: 25%;
+    height: 50%;
+    background-color: #005FFF;
+}
+
+.bar6 {
+    position: absolute;
+    top:50%;
+    left:25%;
+    width: 25%;
+    height: 50%;
+    background-color: #2C7CFF;
+}
+
+.bar7 {
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 25%;
+    height: 50%;
+    background-color: #5D99FF;
+}
+
+.bar8 {
+    position: absolute;
+    top:50%;
+    left:75%;
+    width: 25%;
+    height: 50%;
+    background-color: #8EB8FF;
+}
