@@ -25,60 +25,78 @@ $(function(){
         }
     });
     });
+    
+    setTimeout(function(){
+        $('.start').show();
+    },3500);
+
+    setTimeout(function(){
+        $('.counter').hide();
+    },3500);
+    
+    setTimeout(function(){
+        $('.start').hide();
+    },4500);
+    
 
     setTimeout(function(){
     
     var clickEventType=((window.ontouchstart!==null)?'click':'touchstart');
 
     $(".bar1").on(clickEventType, function(){
-        $(".bar5").animate({top: "+=15",
-                            height: "-=15",}, 100 );
+        $(".bar5").animate({height: "-=15",}, 100 ); 
      });
      
     $(".bar2").on(clickEventType, function(){
-        $(".bar6").animate({top: "+=15",
-                            height: "-=15",}, 100 );   
+        $(".bar6").animate({height: "-=15",}, 100 );   
     });
     
     $(".bar3").on(clickEventType, function(){
-        $(".bar7").animate({top: "+=15",
-                        　  height: "-=15",}, 100 );  
+        $(".bar7").animate({height: "-=15",}, 100 );  
     });
     
     $(".bar4").on(clickEventType, function(){
-        $(".bar8").animate({top: "+=15",
-                            height: "-=15",}, 100 );   
+        $(".bar8").animate({height: "-=15",}, 100 );   
     });
     
     $(".bar5").on(clickEventType, function(){
-        $(this).animate({height: "+=15",
-                         top: "-=15",}, 100 );
+        $(this).animate({height: "+=15",}, 100 );
     });
     
     $(".bar6").on(clickEventType, function(){
-        $(this).animate({height: "+=15",
-                         top: "-=15",}, 100 );    
+        $(this).animate({height: "+=15",}, 100 );    
     });
     
     $(".bar7").on(clickEventType, function(){
-        $(this).animate({height: "+=15",
-                         top: "-=15",}, 100 );      
+        $(this).animate({height: "+=15",}, 100 );      
     });
     
     $(".bar8").on(clickEventType, function(){
-        $(this).animate({height: "+=15",
-                         top: "-=15",}, 100 );     
+        $(this).animate({height: "+=15"}, 100 );     
     });
     },3500);
     
     setTimeout(function(){
-        $('.counter').hide();
-    },3500);
-    
-    
-    setTimeout(function(){
-    window.location.href = 'result.html';
+        $("div").off("touchstart");
+        var bar1 = $(".bar1").height();
+        var bar5 = $(".bar5").height();
+        var row1 = bar1 - bar5
+        var bar2 = $(".bar2").height();
+        var bar6 = $(".bar6").height();
+        var row2 = bar2 - bar6
+        var bar3 = $(".bar3").height();
+        var bar7 = $(".bar7").height();
+        var row3 = bar3 - bar7
+        var bar4 = $(".bar4").height();
+        var bar8 = $(".bar8").height();
+        var row4 = bar4 - bar8
+        $(".row1").text(row1);
+        $(".row2").text(row2);
+        $(".row3").text(row3);
+        $(".row4").text(row4);
+        $('.result').show();
     },15000);
+
     
 });
 
@@ -86,6 +104,7 @@ $(function(){
 </head>
 <body>
     <p><span class="counter">1</span></p>
+    <div class="start" style="display: none;">START</div>
     <div class="bar1"></div>
     <div class="bar2"></div>
     <div class="bar3"></div>
@@ -94,5 +113,11 @@ $(function(){
     <div class="bar6"></div>
     <div class="bar7"></div>
     <div class="bar8"></div>
+    <div class="result" style="display: none;">
+        <span class="row1"></span>
+        <span class="row2"></span>
+        <span class="row3"></span>
+        <span class="row4"></span>
+    </div>
 </body>
 </html>

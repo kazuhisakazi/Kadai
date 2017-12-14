@@ -1,9 +1,9 @@
-html,body{
+html,body {
   overflow: hidden
 }
 
 
-.counter{
+.counter {
     position: absolute;
     font-size: 75px;
     font-family: fantasy;
@@ -13,7 +13,20 @@ html,body{
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
-    z-index: 5;
+    z-index: 1;
+}
+
+.start {
+    position: absolute;
+    font-size: 75px;
+    font-family: fantasy;
+    color: lightcyan;
+    -webkit-text-stroke-color: #000;
+    -webkit-text-stroke-width: 1px;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 2;
 }
 
 .bar1 {
@@ -54,7 +67,7 @@ html,body{
 
 .bar5 {
     position: absolute;
-    top:50%;
+    bottom: 0;
     left:0;
     width: 25%;
     height: 50%;
@@ -63,7 +76,7 @@ html,body{
 
 .bar6 {
     position: absolute;
-    top:50%;
+    bottom: 0;
     left:25%;
     width: 25%;
     height: 50%;
@@ -72,7 +85,7 @@ html,body{
 
 .bar7 {
     position: absolute;
-    top:50%;
+    bottom: 0;
     left:50%;
     width: 25%;
     height: 50%;
@@ -81,9 +94,19 @@ html,body{
 
 .bar8 {
     position: absolute;
-    top:50%;
+    bottom: 0;
     left:75%;
     width: 25%;
     height: 50%;
     background-color: #8EB8FF;
+}
+
+.result {
+    position: absolute;
+    bottom:10%;
+    left:10%;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    z-index: 3;
 }
