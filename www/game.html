@@ -90,10 +90,16 @@ $(function(){
         var bar4 = $(".bar4").height();
         var bar8 = $(".bar8").height();
         var row4 = bar4 - bar8
-        $(".row1").text(row1);
-        $(".row2").text(row2);
-        $(".row3").text(row3);
-        $(".row4").text(row4);
+        var w = $(window).height() * 2;
+        var r = w - row1 - row2 - row3 - row4
+        
+    if (r == 0) {
+        $(".kekka").text("引き分け！");
+    } else if (r < 0) {
+        $(".kekka").text("黄色の勝ち！");
+    } else {
+        $(".kekka").text("青の勝ち！");
+    }
         $('.result').show();
     },15000);
 
@@ -114,10 +120,7 @@ $(function(){
     <div class="bar7"></div>
     <div class="bar8"></div>
     <div class="result" style="display: none;">
-        <span class="row1"></span>
-        <span class="row2"></span>
-        <span class="row3"></span>
-        <span class="row4"></span>
+        <span class="kekka"></span>
     </div>
 </body>
 </html>
