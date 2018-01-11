@@ -44,31 +44,31 @@ $(function(){
     var clickEventType=((window.ontouchstart!==null)?'click':'touchstart');
 
     $(".bar1").on(clickEventType, function(){
-        $(".bar5").animate({height: "-=15",}, 100 ); 
+        $(".bar5").animate({height: "-=15"}, 100 ); 
      });
      
     $(".bar2").on(clickEventType, function(){
-        $(".bar6").animate({height: "-=15",}, 100 );   
+        $(".bar6").animate({height: "-=15"}, 100 );   
     });
     
     $(".bar3").on(clickEventType, function(){
-        $(".bar7").animate({height: "-=15",}, 100 );  
+        $(".bar7").animate({height: "-=15"}, 100 );  
     });
     
     $(".bar4").on(clickEventType, function(){
-        $(".bar8").animate({height: "-=15",}, 100 );   
+        $(".bar8").animate({height: "-=15"}, 100 );   
     });
     
     $(".bar5").on(clickEventType, function(){
-        $(this).animate({height: "+=15",}, 100 );
+        $(this).animate({height: "+=15"}, 100 );
     });
     
     $(".bar6").on(clickEventType, function(){
-        $(this).animate({height: "+=15",}, 100 );    
+        $(this).animate({height: "+=15"}, 100 );    
     });
     
     $(".bar7").on(clickEventType, function(){
-        $(this).animate({height: "+=15",}, 100 );      
+        $(this).animate({height: "+=15"}, 100 );      
     });
     
     $(".bar8").on(clickEventType, function(){
@@ -96,12 +96,12 @@ $(function(){
     if (r == 0) {
         $(".kekka").text("引き分け！");
     } else if (r < 0) {
-        $(".kekka").text("黄色の勝ち！");
+        $(".kekka").text("黄の勝ち！");
     } else {
         $(".kekka").text("青の勝ち！");
     }
         $('.result').show();
-    },15000);
+    },18000);
 
     
 });
@@ -111,6 +111,7 @@ $(function(){
 <body>
     <p><span class="counter">1</span></p>
     <div class="start" style="display: none;">START</div>
+    <div class="time"></div>
     <div class="bar1"></div>
     <div class="bar2"></div>
     <div class="bar3"></div>
@@ -121,6 +122,7 @@ $(function(){
     <div class="bar8"></div>
     <div class="result" style="display: none;">
         <span class="kekka"></span>
+        <a href="game.html" class="retry">リトライ</a>
     </div>
 </body>
 </html>
