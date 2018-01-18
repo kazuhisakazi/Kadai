@@ -11,10 +11,7 @@
     
 <script>
 $(function(){
-    $(window).on('touchmove.noScroll', function(e) {
-    e.preventDefault();
-    });
-
+    <!-- 3秒間数える -->
     $("game.html").ready(function() {
     var current = $('.counter').text();
     $({count: 3}).animate({count: current}, {
@@ -38,7 +35,7 @@ $(function(){
         $('.start').hide();
     },4500);
     
-
+    <!-- ゲーム部分 -->
     setTimeout(function(){
     
     var clickEventType=((window.ontouchstart!==null)?'click':'touchstart');
@@ -76,6 +73,7 @@ $(function(){
     });
     },3500);
     
+    <!-- ゲーム勝利判定部分 -->
     setTimeout(function(){
         $("div").off("touchstart");
         var bar1 = $(".bar1").height();
